@@ -103,7 +103,7 @@
   align-items: center;
   flex-direction: column; */
 
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: auto;
 
@@ -153,10 +153,12 @@
 }
 
 .app__navigation {
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 44vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 
   padding: 1rem;
