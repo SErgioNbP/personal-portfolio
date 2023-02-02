@@ -4,7 +4,7 @@
     height: 100%;
     flex-direction: row;
 
-    padding: 6rem 2rem 0rem;
+    padding: 5rem 2rem 0rem;
 
     @media screen and (min-width: 2000px) {
         padding-top: 8rem;
@@ -29,6 +29,8 @@
 }
 
 .subtitle {
+    font-size: 1.5rem;
+    color: var(--gray-color);
     padding: 12px;
 }
 
