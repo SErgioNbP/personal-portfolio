@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Tooltip } from 'react-tooltip'
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -15,7 +14,7 @@ const Skills = () => {
         const skillsQuery = '*[_type == "skills"]';
 
         client.fetch(experiencesQuery).then((data) => {
-            setExperiences(data.sort((a,b) => b.year - a.year));
+            setExperiences(data.sort((a, b) => b.year - a.year));
         });
 
         client.fetch(skillsQuery).then((data) => {
@@ -66,17 +65,12 @@ const Skills = () => {
                                             data-for={work.name}
                                             key={work.name}
                                         >
-                                            <h4 className="bold-text">{work.name}</h4>
-                                            <p className="p-text">{work.company}</p>
+                                            <div class="tooltip">
+                                                <h4 className="bold-text">{work.name}</h4>
+                                                <p className="p-text">{work.company}</p>
+                                                <span class="tooltiptext">{work.desc}</span>
+                                            </div>
                                         </motion.div>
-                                        {/* <Tooltip
-                                            id={work.name}
-                                            effect="solid"
-                                            arrowColor="#fff"
-                                            className="skills-tooltip"
-                                        >
-                                            {work.desc}
-                                        </Tooltip> */}
                                     </>
                                 ))}
                             </motion.div>

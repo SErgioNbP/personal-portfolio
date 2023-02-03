@@ -5,10 +5,14 @@ const SocialMedia = () => {
     return (
         <div className="app__social">
             <div>
-                <FaLinkedin />
+                <a href="https://www.linkedin.com/in/sergionevespinheiro/" target="_blank">
+                    <FaLinkedin />
+                </a>
             </div>
             <div>
-                <FaGithub />
+                <a href="https://www.github.com/SErgioNbP/3d-card-effect" target="_blank">
+                    <FaGithub />
+                </a>
             </div>
         </div>
     )
