@@ -65,10 +65,10 @@ const Skills = () => {
                                             data-for={work.name}
                                             key={work.name}
                                         >
-                                            <div class="tooltip">
+                                            <div className="tooltip">
                                                 <h4 className="bold-text">{work.name}</h4>
                                                 <p className="p-text">{work.company}</p>
-                                                <span class="tooltiptext">{work.desc}</span>
+                                                <span className="tooltiptext">{work.desc}</span>
                                             </div>
                                         </motion.div>
                                     </>
