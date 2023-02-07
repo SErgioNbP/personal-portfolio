@@ -39,9 +39,9 @@ const Header = () => {
                 <div className="app__flex">
                     <h1 className="title">
                         <span id="hello" data-value="HELLO." className="gradient block uppercase">Hello.</span>
-                        <span className="block uppercase">I&#39;m</span>
-                        <span className="block uppercase">Sérgio</span>
-                        <span className="block uppercase">Neves</span>
+                        <span className="block">I&#39;m</span>
+                        <span className="block">Sérgio</span>
+                        <span className="block">Neves</span>
                     </h1>
                 </div>
 

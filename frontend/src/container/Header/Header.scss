@@ -4,7 +4,7 @@
     height: 100%;
     flex-direction: row;
 
-    padding: 5rem 2rem;
+    padding: 1.5rem;
 
     @media screen and (min-width: 2000px) {
         padding-top: 8rem;
@@ -30,6 +30,8 @@
 .title {
     font-size: 8rem;
     text-align: left;
+    line-height: 1.1;
+    padding: 1rem;
 
     @media screen and (max-width: 450px) {
         font-size: 6rem;
