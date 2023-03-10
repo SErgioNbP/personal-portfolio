@@ -9,6 +9,28 @@ import './Navbar.scss';
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
 
+    const handleDownload = () => {
+        fetch('/pdfs/Sérgio-Neves-resume-2023.pdf')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                const url = window.URL.createObjectURL(new Blob([blob]));
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', 'Sérgio-Neves-resume-2023.pdf');
+                document.body.appendChild(link);
+                link.click();
+                link.parentNode.removeChild(link);
+            })
+            .catch(error => {
+                console.error('Error fetching PDF file:', error);
+            });
+    };
+
     return (
         <nav className='app__navbar'>
             <ul className='app__navbar-links'>
@@ -19,6 +41,7 @@ const Navbar = () => {
                     </li>
                 ))}
             </ul>
+            <button className='app__navbar-download' onClick={handleDownload}>Download CV</button>
 
             <div className="app__navbar-menu">
                 <BiMenu onClick={() => setToggle(true)} />
@@ -43,6 +66,6 @@ const Navbar = () => {
             </div>
         </nav>
     )
-}
+};
 
 export default Navbar;

@@ -153,9 +153,9 @@
 }
 
 .app__navigation {
-  position: fixed;
-  right: 0px;
-  top: 44vh;
+  position: relative;
+  right: -45vw;
+  top: -55vh;
   display: flex;
   justify-content: center;
   align-items: center;

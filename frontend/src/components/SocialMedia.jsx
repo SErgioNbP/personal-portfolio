@@ -10,7 +10,7 @@ const SocialMedia = () => {
                 </a>
             </div>
             <div>
-                <a href="https://www.github.com/SErgioNbP/3d-card-effect" target="_blank">
+                <a href="https://www.github.com/SErgioNbP" target="_blank">
                     <FaGithub />
                 </a>
             </div>
